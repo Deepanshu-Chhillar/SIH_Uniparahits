@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
+import { Target, Compass, Sparkles } from 'lucide-react';
 
 export default function MissionVision() {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -17,69 +18,63 @@ export default function MissionVision() {
     <section className="py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Mission */}
+          {/* Mission Card */}
           <div
             ref={(el) => { refs.current[0] = el; }}
-            className="animate-on-scroll glass-card rounded-2xl p-8 relative overflow-hidden group glass-hover"
+            className="animate-on-scroll glass-card rounded-3xl p-8 sm:p-9 relative overflow-hidden group glass-hover border border-white/10 flex flex-col justify-between"
           >
             <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ background: 'radial-gradient(circle at top left, rgba(124,58,237,0.1) 0%, transparent 60%)' }}
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ background: 'radial-gradient(circle at top left, rgba(184,29,66,0.15) 0%, transparent 60%)' }}
             />
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg" style={{ background: 'rgba(124,58,237,0.15)', border: '1px solid rgba(124,58,237,0.3)' }}>
-                  🎯
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-primary" style={{ background: 'rgba(184,29,66,0.15)', border: '1px solid rgba(184,29,66,0.3)' }}>
+                  <Target className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground">Our Mission</h3>
+                <span className="text-[10px] font-mono text-accent uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/25">
+                  The Mandate
+                </span>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                To build India&apos;s most trusted, gamified student talent network — where every college student can prove their skills, earn real money, and grow through a merit-based rank system that employers actually trust.
+              <h3 className="text-xl font-bold text-foreground mb-4">Our Mission</h3>
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
+                To construct India&apos;s most resilient, fraud-proof student talent network — enabling students to validate technical competency via peer review, earn through escrow-backed bounties, and build verified proof-of-work identities employers trust.
               </p>
+            </div>
+            <div className="relative z-10 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-accent" />
+              <span>Peer-Reviewed Proof-of-Work Verification</span>
             </div>
           </div>
 
-          {/* Vision */}
+          {/* Vision Card */}
           <div
             ref={(el) => { refs.current[1] = el; }}
-            className="animate-on-scroll glass-card rounded-2xl p-8 relative overflow-hidden group glass-hover"
+            className="animate-on-scroll glass-card rounded-3xl p-8 sm:p-9 relative overflow-hidden group glass-hover border border-white/10 flex flex-col justify-between"
             style={{ transitionDelay: '120ms' }}
           >
             <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ background: 'radial-gradient(circle at top right, rgba(245,158,11,0.1) 0%, transparent 60%)' }}
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ background: 'radial-gradient(circle at top right, rgba(124,58,237,0.15) 0%, transparent 60%)' }}
             />
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg" style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)' }}>
-                  🌟
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-primary" style={{ background: 'rgba(124,58,237,0.15)', border: '1px solid rgba(124,58,237,0.3)' }}>
+                  <Compass className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground">Our Vision</h3>
+                <span className="text-[10px] font-mono text-purple-400 uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/25">
+                  The Destination
+                </span>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                A future where every Indian college student has a verifiable digital work identity — their rank is their resume, their guild is their firm, and their first ₹ earned in college is just the beginning of a lifelong career.
+              <h3 className="text-xl font-bold text-foreground mb-4">Our Vision</h3>
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
+                Where your <strong className="text-foreground">Rank is your Resume</strong>, your <strong className="text-foreground">Guild is your Agency</strong>, and your code speaks louder than self-declared CV claims.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Origin Story */}
-        <div
-          ref={(el) => { refs.current[2] = el; }}
-          className="animate-on-scroll mt-6 glass-card rounded-2xl p-8 relative overflow-hidden"
-          style={{ transitionDelay: '200ms' }}
-        >
-          <div className="relative z-10 max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-1 h-6 rounded-full bg-primary" />
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">The Origin Story</span>
+            <div className="relative z-10 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-purple-400" />
+              <span>Deterministic Meritocracy • Zero Self-Declared CV Fluff</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              In 2026, Akshit Bhatt — a student frustrated by the chaos of WhatsApp-based freelancing, ghost payments, and unverifiable skill claims — designed UniParahits for the Smart India Hackathon. The insight was simple: the gig economy needed what gaming already had — a rank system that meant something.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              The name <span className="text-foreground font-semibold">UniParahits</span> reflects the platform&apos;s dual identity: <em>University</em> (the origin) and <em>Parahits</em> (beyond self — serving others through skilled collaboration). It&apos;s not just a platform. It&apos;s a movement to make college talent verifiable, valuable, and visible.
-            </p>
           </div>
         </div>
       </div>

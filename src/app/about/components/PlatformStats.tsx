@@ -2,12 +2,12 @@
 import React, { useEffect, useRef } from 'react';
 
 const stats = [
-  { value: '40M+', label: 'Higher-Ed Students in India', color: '#f59e0b' },
-  { value: '$455B', label: 'Global Gig Economy TAM', color: '#7c3aed' },
-  { value: '8', label: 'Rank Tiers (F to S+)', color: '#a855f7' },
-  { value: '85%', label: 'Guild Payout on Every Bounty', color: '#3b82f6' },
-  { value: '15%', label: 'Platform Commission (flat)', color: '#6b7280' },
-  { value: '0', label: 'Manual Payment Mediations', color: '#22c55e' },
+  { value: '40M+', label: 'Higher-Ed Students in India', sub: 'Target Student Demographic', color: '#b81d42' },
+  { value: '$455B', label: 'Global Gig Economy TAM', sub: 'Rapidly Growing Market', color: '#8b5cf6' },
+  { value: '5', label: 'Deterministic Rank Tiers (RNK-E to RNK-A)', sub: 'Pure Skill Progression', color: '#a855f7' },
+  { value: '85%', label: 'Direct Squad Payout', sub: 'Milestone Auto-Split', color: '#3b82f6' },
+  { value: '15%', label: 'Platform Maintenance Fee', sub: 'Escrow & Infrastructure', color: '#ec4899' },
+  { value: '0%', label: 'Payment Default Risk (Smart Escrow Vaults)', sub: '100% Locked Upfront', color: '#10b981' },
 ];
 
 export default function PlatformStats() {
@@ -23,42 +23,46 @@ export default function PlatformStats() {
   }, []);
 
   return (
-    <section className="py-16 px-4 sm:px-6 relative">
+    <section className="py-20 px-4 sm:px-6 relative">
       <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at center, #7c3aed 0%, transparent 60%)' }}
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at center, #8b5cf6 0%, transparent 60%)' }}
       />
       <div className="max-w-6xl mx-auto relative z-10">
-        <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll text-center mb-12">
+        <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll text-center mb-14">
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-4">
+            06 // By The Numbers
+          </span>
           <h2 className="section-title text-foreground mb-4">
-            The Numbers Behind{' '}
-            <span className="text-accent">UniParahits</span>
+            The Metrics Behind{' '}
+            <span className="text-accent glow-text-wine">UniParahits</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            A platform built on real data, real opportunity, and a real commitment to student welfare.
+          <p className="text-muted-foreground max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+            Engineered around verifiable market data, student equity, and ironclad escrow mathematics.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {stats.map((s, i) => (
             <div
               key={s.label}
               ref={(el) => { refs.current[i + 1] = el; }}
-              className="animate-on-scroll glass-card rounded-2xl p-6 text-center group glass-hover relative overflow-hidden"
+              className="animate-on-scroll glass-card rounded-3xl p-7 text-center group glass-hover relative overflow-hidden border border-white/10 flex flex-col justify-center"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ background: `radial-gradient(circle at center, ${s.color}08 0%, transparent 60%)` }}
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ background: `radial-gradient(circle at center, ${s.color}12 0%, transparent 65%)` }}
               />
               <div className="relative z-10">
                 <p
-                  className="rank-mono text-3xl sm:text-4xl font-bold mb-2"
-                  style={{ color: s.color }}
+                  className="rank-mono text-4xl sm:text-5xl font-bold mb-2 tracking-tight"
+                  style={{ color: s.color, textShadow: `0 0 25px ${s.color}40` }}
                 >
                   {s.value}
                 </p>
-                <p className="text-xs text-muted-foreground leading-tight">{s.label}</p>
+                <p className="text-sm font-bold text-foreground mb-1 leading-snug">{s.label}</p>
+                <p className="text-[11px] font-mono text-muted-foreground">{s.sub}</p>
               </div>
             </div>
           ))}

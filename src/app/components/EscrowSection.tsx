@@ -34,14 +34,14 @@ const steps = [
   {
     num: '03',
     title: 'Escrow Locked',
-    desc: 'Company deposits the full project fee into the Smart Escrow Contract. Funds are secured — zero risk.',
+    desc: 'Company deposits the project fee in 🪙 ZENI Credits (backed 1:1 by liquid INR) into Smart Escrow. Funds secured — zero risk.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    color: '#f59e0b',
+    color: '#b81d42',
   },
   {
     num: '04',
@@ -57,14 +57,14 @@ const steps = [
   {
     num: '05',
     title: 'Auto-Split Released',
-    desc: 'Smart contract auto-releases: 85% to Guild (split by contribution) + 15% platform fee. Instant, zero fraud.',
+    desc: 'Smart contract auto-releases: 85% to Guild in 🪙 ZENI Credits + ⚡ MANA Credits (by contribution weight) + 15% platform fee. Zero fraud.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23" />
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
     ),
-    color: '#f59e0b',
+    color: '#b81d42',
     isLast: true,
   },
 ];
@@ -82,22 +82,22 @@ export default function EscrowSection() {
   }, []);
 
   return (
-    <section id="escrow" className="py-20 px-4 sm:px-6 relative">
+    <section id="escrow" className="py-24 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll mb-4 text-center">
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            07 / Trust & Escrow System
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
+            07 / Safe Escrow Payments
           </span>
         </div>
         <div ref={(el) => { refs.current[1] = el; }} className="animate-on-scroll mb-4 text-center">
           <h2 className="section-title text-foreground mb-4">
-            Zero Fraud.{' '}
-            <span className="text-accent">Fully Automated.</span>
+            100% Safe Escrow Payments.{' '}
+            <span className="text-accent">Never Get Ghosted.</span>
           </h2>
         </div>
         <div ref={(el) => { refs.current[2] = el; }} className="animate-on-scroll mb-14 text-center">
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Smart Escrow Contracts eliminate payment risk for both sides. The Demotion Engine maintains quality without any manual review.
+            Clients deposit project funds into secure escrow before work starts. Once delivered and approved, student teams get paid automatically with zero payment delays.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function EscrowSection() {
                     </div>
                     {step.isLast && (
                       <div className="mt-3 sm:mt-0 sm:ml-auto flex-shrink-0 flex gap-3">
-                        <div className="text-center px-3 py-2 rounded-lg" style={{ background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.25)' }}>
+                        <div className="text-center px-3 py-2 rounded-lg" style={{ background: 'rgba(184,29,66,0.15)', border: '1px solid rgba(184,29,66,0.3)' }}>
                           <p className="rank-mono text-base font-bold text-accent">85%</p>
                           <p className="text-xs text-muted-foreground">Guild</p>
                         </div>
@@ -180,10 +180,10 @@ export default function EscrowSection() {
             </div>
             <div>
               <h4 className="text-base font-bold text-foreground mb-1">
-                The Demotion Engine — Automated Quality Control
+                Fair Quality Control — How Ratings Work
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Late delivery or plagiarised work → low client rating → algorithm instantly drops Trust Score → automatic rank demotion (e.g., B-Rank → C-Rank). Extreme violations result in permanent ban: <span className="font-bold text-red-400">&quot;Court Martial.&quot;</span> No manual review. No bias.
+                Late delivery or plagiarised work → low client rating → system lowers your Trust Score → rank review (e.g., Rank B → Rank C). Serious offenses like cheating lead to immediate account suspension to protect honest students.
               </p>
             </div>
           </div>

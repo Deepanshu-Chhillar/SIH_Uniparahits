@@ -2,17 +2,18 @@
 import React, { useEffect, useRef } from 'react';
 
 const GUILD_TIERS = [
-  { ranks: 'S & S+', label: 'Guild Masters', sub: 'Top 1% — Hall of Fame', color: '#f59e0b', width: '28%', members: '~50' },
-  { ranks: 'A & B',  label: 'Guild Seniors', sub: 'Leads & Project Owners', color: '#a855f7', width: '44%', members: '~200' },
-  { ranks: 'C & D',  label: 'Core Workers',  sub: 'Guild Builders & Doers', color: '#3b82f6', width: '62%', members: '~800' },
-  { ranks: 'E & F',  label: 'Recruits',       sub: 'New members — learning', color: '#475569', width: '100%', members: '~3000+' },
+  { ranks: 'RNK-A', label: 'Guild Masters', sub: 'Apex Tier — Project Leads', color: '#b81d42', width: '32%', members: '~100' },
+  { ranks: 'RNK-B', label: 'Senior Leads', sub: 'Project Leads & Architects', color: '#a855f7', width: '50%', members: '~400' },
+  { ranks: 'RNK-C', label: 'Senior Mentors', sub: 'Guild Builders & Evaluators', color: '#3b82f6', width: '68%', members: '~1,200' },
+  { ranks: 'RNK-D', label: 'Active Contributors', sub: 'Devs, Designers, Writers, Editors', color: '#8b5cf6', width: '84%', members: '~2,500' },
+  { ranks: 'RNK-E', label: 'Student Learners', sub: 'Learning Mode — Shadowing Teams', color: '#64748b', width: '100%', members: '~5,000+' },
 ];
 
 const howItWorks = [
-  { step: '01', title: 'Reach C-Rank', desc: 'Earn ₹5,000 in gigs and collect three 5-star ratings to unlock Guild Creation.', color: '#3b82f6' },
-  { step: '02', title: 'Build Your Guild', desc: 'Recruit F and E-rank students as members. Define roles: dev, design, QA.', color: '#a855f7' },
-  { step: '03', title: 'Accept Projects', desc: 'A startup posts a ₹50,000 app build. Your guild applies as a unit.', color: '#f59e0b' },
-  { step: '04', title: 'Auto-Split Rewards', desc: 'Platform splits XP and ₹ automatically based on each member\'s contribution.', color: '#f59e0b' },
+  { step: '01', title: 'Reach Rank C Mentor', desc: 'Complete 15+ tasks and maintain 4.2+ Trust Score to unlock Guild Creation privileges.', color: '#3b82f6' },
+  { step: '02', title: 'Assemble Your Squad', desc: 'Team up with coders, UI/UX designers, video editors, and content writers from your college.', color: '#a855f7' },
+  { step: '03', title: 'Accept Paid Projects', desc: 'A startup funds a 60,000 ZENI sprint (₹60,000 INR) in smart escrow. Your guild takes on the project as a cohesive team.', color: '#b81d42' },
+  { step: '04', title: 'Automated Payout Split', desc: 'Smart contract distributes 85% project payment in 🪙 ZENI Credits and ⚡ MANA Credits automatically based on contribution weight.', color: '#b81d42' },
 ];
 
 export default function GuildSection() {
@@ -58,19 +59,19 @@ export default function GuildSection() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll mb-4 text-center">
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            06 / Guild System
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
+            06 / Student Guilds
           </span>
         </div>
         <div ref={(el) => { refs.current[1] = el; }} className="animate-on-scroll mb-4 text-center">
           <h2 className="section-title text-foreground mb-4">
-            Multiplayer{' '}
-            <span className="text-primary">Freelancing</span>
+            Multi-Skill{' '}
+            <span className="text-primary">Student Teams</span>
           </h2>
         </div>
         <div ref={(el) => { refs.current[2] = el; }} className="animate-on-scroll mb-14 text-center">
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Startups don&apos;t just need one coder — they need a full team. The Guild System enables multi-role student teams to take on complete projects together.
+            Businesses need complete deliverables, not isolated work. Student Guilds bring together developers, designers, video editors, and writers to deliver projects together.
           </p>
         </div>
 
@@ -147,7 +148,7 @@ export default function GuildSection() {
         >
           {[
             { icon: '🏢', title: 'Agency Model', desc: 'Introduces the agency model to the college ecosystem — full-stack project delivery.' },
-            { icon: '🎓', title: 'Built-in Mentorship', desc: 'S/A-rank leaders mentor F/E-rank recruits. Organic knowledge transfer.' },
+            { icon: '🎓', title: 'Built-in Mentorship', desc: 'A/B-rank leads and C-rank builders mentor D/E-rank students. Organic knowledge transfer.' },
             { icon: '⚡', title: 'One-Click Hiring', desc: 'Companies hire an entire guild for complex projects — massive convenience.' },
           ].map((b) => (
             <div key={b.title} className="glass-card rounded-xl p-6 text-center group glass-hover">

@@ -5,27 +5,30 @@ const problems = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 8v4M12 16h.01" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    title: 'Information Asymmetry',
-    desc: "Companies don't trust student skills because there's no verifiable proof of quality. Resumes lie. Portfolios are unverified. The signal-to-noise ratio is broken.",
-    accent: '#f59e0b',
-    stat: '73%',
-    statLabel: 'of recruiters cite unverifiable skills as #1 barrier',
+    badge: 'VERIFIED SKILLS',
+    title: 'Practical Proof of Work vs. Fake Resumes',
+    desc: 'Static resumes and unverified claims make it impossible for talented students to get noticed, while recruiters waste hours on unproven applicants. UniParahits replaces PDF resumes with real project proof verified by senior student mentors.',
+    accent: '#b81d42',
+    stat: '100%',
+    statLabel: 'Verified practical projects over static resumes',
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    title: 'High Transaction Costs',
-    desc: 'Messy, unstructured negotiations on WhatsApp with zero accountability. No escrow, no contracts, no recourse. Students get ghosted after delivering work.',
+    badge: 'SECURE ESCROW',
+    title: 'Guaranteed Payment vs. Payment Ghosting',
+    desc: 'Too many students do freelance work on chat and get ghosted without receiving a single rupee. UniParahits locks client project payments in smart escrow before work begins, guaranteeing you get paid when you deliver.',
     accent: '#7c3aed',
-    stat: '60%',
-    statLabel: 'of student freelancers report non-payment incidents',
+    stat: '0%',
+    statLabel: 'Payment default risk with smart escrow vaults',
   },
 ];
 
@@ -56,21 +59,21 @@ export default function ProblemSection() {
           ref={(el) => { cardRefs.current[0] = el; }}
           className="animate-on-scroll mb-4 text-center"
         >
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            01 / Problem
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
+            01 / The Real Problem
           </span>
         </div>
 
         <div
           ref={(el) => { cardRefs.current[1] = el; }}
-          className="animate-on-scroll mb-12 text-center"
+          className="animate-on-scroll mb-14 text-center"
         >
           <h2 className="section-title text-foreground mb-4">
-            The Student Gig Economy Is{' '}
-            <span className="text-primary">Broken</span>
+            Traditional Freelance Platforms Are{' '}
+            <span className="text-primary">Failing Students</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
-            Traditional platforms like Fiverr are too crowded and globalised for a first-year student to gain traction. Two core failures persist.
+            Global bidding sites force college students into price wars, while unverified client deals expose them to unpaid work and scams.
           </p>
         </div>
 
@@ -79,7 +82,7 @@ export default function ProblemSection() {
             <div
               key={p.title}
               ref={(el) => { cardRefs.current[i + 2] = el; }}
-              className="animate-on-scroll glass-card glass-hover rounded-2xl p-8 relative overflow-hidden group"
+              className="animate-on-scroll glass-card glass-hover rounded-3xl p-8 relative overflow-hidden group border border-white/10"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Scan line */}
@@ -92,24 +95,32 @@ export default function ProblemSection() {
               />
 
               <div className="relative z-10">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-                  style={{ background: `${p.accent}20`, color: p.accent, border: `1px solid ${p.accent}40` }}
-                >
-                  {p.icon}
+                <div className="flex items-center justify-between mb-6">
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center"
+                    style={{ background: `${p.accent}20`, color: p.accent, border: `1px solid ${p.accent}40` }}
+                  >
+                    {p.icon}
+                  </div>
+                  <span
+                    className="text-[10px] rank-mono px-2.5 py-1 rounded-full border uppercase tracking-wider font-semibold"
+                    style={{ background: `${p.accent}15`, color: p.accent, borderColor: `${p.accent}30` }}
+                  >
+                    {p.badge}
+                  </span>
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-3">{p.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{p.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-8">{p.desc}</p>
 
-                <div className="flex items-end gap-3 pt-4 border-t border-border">
+                <div className="flex items-end gap-3 pt-5 border-t border-white/10">
                   <span
                     className="rank-mono text-4xl font-bold"
                     style={{ color: p.accent }}
                   >
                     {p.stat}
                   </span>
-                  <span className="text-xs text-muted-foreground leading-tight mb-1 max-w-[180px]">
+                  <span className="text-xs text-muted-foreground leading-tight mb-1 max-w-[200px]">
                     {p.statLabel}
                   </span>
                 </div>
