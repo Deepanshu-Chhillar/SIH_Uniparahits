@@ -17,17 +17,35 @@ export default function PlatformEconomics() {
     <section className="py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll text-center mb-12">
-          <h2 className="section-title text-foreground mb-4">Platform Economics</h2>
+          <h2 className="section-title text-foreground mb-4">Fair & Transparent Economics</h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            A simple, transparent model designed to reward students fairly.
+            No hidden charges. Clear cuts so student squads keep the lion&apos;s share of their hard work.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
-            { label: 'Guild Payout', val: '85%', desc: 'Auto-split among guild members by contribution weight', color: '#f59e0b', icon: '🏆' },
-            { label: 'Platform Fee', val: '15%', desc: 'Covers escrow infrastructure, AI moderation, and platform ops', color: '#7c3aed', icon: '⚙️' },
-            { label: 'Commission Reduction', val: 'A/B Rank', desc: 'Senior guilds earn a lower commission rate as a loyalty reward', color: '#a855f7', icon: '📈' },
+            {
+              label: 'Student Squad Payout',
+              val: '85%',
+              desc: 'Directly distributed to student team members according to each person\'s work contribution.',
+              color: '#b81d42',
+              icon: '🏆',
+            },
+            {
+              label: 'Platform Fee',
+              val: '15%',
+              desc: 'Covers secure escrow infrastructure, platform security, and dispute resolution.',
+              color: '#8b5cf6',
+              icon: '⚙️',
+            },
+            {
+              label: 'Senior Rank Perk',
+              val: 'Fee Discounts',
+              desc: 'Rank B and Rank A leads unlock discounted platform fees on high-value client projects.',
+              color: '#a855f7',
+              icon: '📈',
+            },
           ].map((s, i) => (
             <div
               key={s.label}

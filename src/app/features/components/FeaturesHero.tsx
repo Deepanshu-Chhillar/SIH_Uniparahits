@@ -13,7 +13,7 @@ export default function FeaturesHero() {
     <section className="relative pt-32 pb-16 px-4 sm:px-6 text-center overflow-hidden">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] opacity-15 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #7c3aed 0%, transparent 70%)', filter: 'blur(80px)' }}
+        style={{ background: 'radial-gradient(ellipse, #8b5cf6 0%, transparent 70%)', filter: 'blur(90px)' }}
       />
       <div className="noise-overlay absolute inset-0 opacity-[0.03] pointer-events-none" />
 
@@ -22,11 +22,11 @@ export default function FeaturesHero() {
           Platform Features
         </span>
         <h1 className="hero-title text-foreground mb-6">
-          Everything You Need to{' '}
-          <span className="text-primary">Level Up</span>
+          Engineered for Meritocracy.{' '}
+          <span className="text-accent glow-text-wine">Powered by Code.</span>
         </h1>
-        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-          UniParahits is engineered with six core systems that work together to create a meritocratic, fraud-proof, gamified student economy.
+        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          UniParahits gives college students a safe, transparent platform to build real projects, earn guaranteed payouts through escrow, and level up their skills — with zero freelance friction.
         </p>
       </div>
     </section>

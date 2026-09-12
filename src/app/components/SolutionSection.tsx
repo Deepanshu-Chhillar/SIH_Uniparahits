@@ -8,9 +8,9 @@ const pillars = [
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
       </svg>
     ),
-    title: 'F to S+ Ranking System',
-    desc: 'Skill verified through task completion — ranks are earned, never purchased. Every student has a provable, immutable track record.',
-    color: '#f59e0b',
+    title: 'Rank E to Rank A Growth',
+    desc: 'Students start at Rank E in learning mode. Complete tasks and get evaluated by a C-Rank senior mentor to unlock paid gigs.',
+    color: '#b81d42',
   },
   {
     icon: (
@@ -19,9 +19,9 @@ const pillars = [
         <path d="M12 6v6l4 2" />
       </svg>
     ),
-    title: 'Dual-Economy Model',
-    desc: 'XP for peer tasks builds trust. ₹ Bounties for corporate gigs reward verified talent. Two economies, one seamless progression.',
-    color: '#7c3aed',
+    title: '⚡ MANA & 🪙 ZENI Dual Economy',
+    desc: 'Earn ⚡ MANA Credits for peer help, notes & code reviews (non-purchasable). Earn 🪙 ZENI Credits (1 ZENI = ₹1 INR) for verified client deliverables backed by Smart Escrow.',
+    color: '#8b5cf6',
   },
   {
     icon: (
@@ -32,8 +32,8 @@ const pillars = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: 'Guild Formation',
-    desc: 'C-Rank+ students create teams. Guilds take full-stack projects. Automatic XP and ₹ splits by contribution — the agency model for campus.',
+    title: 'Multi-Skill Student Guilds',
+    desc: 'Developers, designers, video editors, and content writers team up into student guilds to deliver complete client projects together.',
     color: '#a855f7',
   },
   {
@@ -43,8 +43,8 @@ const pillars = [
         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    title: 'Smart Escrow Contracts',
-    desc: 'Zero fraud, zero manual mediation. Money locked in escrow until delivery approval — 85% to guild, 15% to platform. Fully automated.',
+    title: 'Smart Escrow Protection',
+    desc: 'Clients deposit funds upfront into secure escrow. Automatic 85% guild payout upon delivery approval — zero payment ghosting.',
     color: '#3b82f6',
   },
 ];
@@ -65,25 +65,24 @@ export default function SolutionSection() {
     <section id="solution" className="py-20 px-4 sm:px-6 relative">
       {/* Background accent */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #7c3aed 0%, transparent 70%)', filter: 'blur(80px)' }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] opacity-15 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, #8b5cf6 0%, transparent 70%)', filter: 'blur(90px)' }}
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll mb-4 text-center">
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            02 / Solution
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
+            02 / How It Works
           </span>
         </div>
 
         <div ref={(el) => { refs.current[1] = el; }} className="animate-on-scroll mb-14 text-center">
           <h2 className="section-title text-foreground mb-4">
-            Where{' '}
-            <span className="text-primary">EdTech</span> Meets{' '}
-            <span className="text-accent">Gig Economy</span>
+            Learn First. Work Together.{' '}
+            <span className="text-accent">Earn Fairly.</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
-            UniParahits sits at the intersection of skill development and real earnings — a platform built from the ground up for Gen-Z students.
+            UniParahits combines practical skill learning, peer mentoring, and real paid freelance projects into one transparent student network.
           </p>
         </div>
 

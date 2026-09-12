@@ -3,28 +3,28 @@ import React, { useEffect, useRef } from 'react';
 
 const markets = [
   {
-    label: 'TAM',
-    full: 'Total Addressable Market',
+    label: 'GLOBAL DEMAND',
+    full: 'Freelance & Digital Gig Economy',
     value: '$455B',
-    desc: 'Global Gig Economy Market',
+    desc: 'Worldwide business budget moving towards agile student freelancers and creative project teams.',
     size: 100,
-    color: '#7c3aed',
+    color: '#8b5cf6',
   },
   {
-    label: 'SAM',
-    full: 'Serviceable Addressable Market',
-    value: '$20–30B',
-    desc: 'Indian Freelance & Student Economy (40M+ higher-ed students)',
-    size: 66,
+    label: 'STUDENT TALENT',
+    full: 'College Students Pan-India',
+    value: '40M+ Students',
+    desc: 'Talented students across technical, creative, and commerce streams eager to build portfolios and earn.',
+    size: 75,
     color: '#a855f7',
   },
   {
-    label: 'SOM',
-    full: 'Serviceable Obtainable Market',
-    value: 'Delhi/NCR',
-    desc: 'Initial launchpad — College ecosystem in Delhi/NCR',
-    size: 33,
-    color: '#f59e0b',
+    label: 'DELHI/NCR CLUSTER',
+    full: 'Genesis Campus Network',
+    value: '120+ Colleges',
+    desc: 'Active launch network integrating DSEU, DTU, NSUT, DU, IPU, and IIT-Delhi into local project opportunities.',
+    size: 45,
+    color: '#b81d42',
   },
 ];
 
@@ -44,16 +44,16 @@ export default function MarketSizeSection() {
     <section id="market" className="py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div ref={(el) => { refs.current[0] = el; }} className="animate-on-scroll mb-4 text-center">
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            03 / Market Opportunity
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-border text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
+            03 / The Opportunity
           </span>
         </div>
         <div ref={(el) => { refs.current[1] = el; }} className="animate-on-scroll mb-14 text-center">
           <h2 className="section-title text-foreground mb-4">
-            A{' '}<span className="text-primary">$455 Billion</span> Opportunity
+            Empowering India&apos;s{' '}<span className="text-primary">College Talent</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Starting hyper-local in Delhi/NCR, scaling to India&apos;s 40M+ higher-education students.
+            Connecting passionate college students with startups and businesses seeking quality work.
           </p>
         </div>
 
